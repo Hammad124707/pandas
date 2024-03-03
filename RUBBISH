@@ -1,0 +1,140 @@
+#this documentation is for pandas and i will try to make it as neat as possible. 
+#Purpose of this documentation is to store everything that i learn. So if i forget i will be able
+# to retrieve the knowledge thorugh it.
+
+
+
+
+#dataframe is combination of columns and an index
+
+data frame is always 2 dimention when it comes to pandas.
+pd.DataFrame() # Create a DataFrame from data.
+now there are 3 parametres in this method,
+pd.DataFrame(data,index = [],columns = [])
+index means rows name
+
+
+#series 
+we can also make series in python useing function
+pd.Series() #creates a one dimentional labbelled array
+names = pd.Series(df["names"])  #creates a series from a dataframe column
+
+Series_name.dtype    #this attribute tells us about the datatype of the elements inside the series
+type(Series_name)   #this tells us about the  data type of the series itself
+
+we can use .loc[] indexer on the above series like we do on df.loc[] 
+# .loc on a Series is more straightforward than on a DataFrame because there's only one dimension to consider.
+series.loc['index']
+series.max()
+series.median()
+series.min()
+
+
+
+
+df.columns  #this tells us about the names of all of our columns in dataframe
+
+
+
+
+
+
+df.to_csv('filename.csv')
+#this is a very cool funtion it will convert my data frame into a csv file which i can go and see at 
+#jupiter notebook. The file can be edited and can be load into another jupiternotebook, isnt it cool?
+
+What is a series.
+#series in pandas is when we have only 1 column and many rows,  or many columns and oonly 1 row. TO make 
+#frame we must atleast have 2 columns and  2 dataframe
+
+
+df.info() #this tells us total elements of our data frame by returning  a tuple
+
+df.shape  #this tells us about the rows and columns of our dataframe. 
+
+#we are seeing that df.shape doesnt have () but df.info() has parenthesis (). this is because 
+# df.info() is a callable method 
+# df.shape is an attribute of pandas. simply put attributes tell us about the dataframe.
+# most methods in python are used by the syntax of df.(method)
+
+
+
+# not only we have methods for df, we also have methods for pd , and we can also use them like 
+pd.method()
+df.method()
+
+# i cant call method of pandas on dataframe , like wise i cant call method of dataframe of pandas.This is very vital to 
+#understand that methods can do alot
+#okay so heres the analogy ,imagine you have a cookbook(Df / pd) in that book we have recipes(methods), we 
+#can use the recipe to cook whatever we want, like wise we can call methods and make things happen
+#think of method like a callable function
+
+
+df.head() #this is used to show us dataframe but in a very small amount
+df.max()  # this returns  max value of every integer column.
+
+pd.read_csv(), #Read data from CSV
+pd.read_excel()  #read data from excel file
+pd.read_sql(): #Read data from a SQL database.
+
+pd.Series():   #Create a Series from data.
+
+
+
+df.loc[]  #df.loc[] is an indexer. It is used for selecting our favourite data. df.loc[index_data , "column name"]. 
+
+# now you must be wondering whats an indexer. An indexer helps us choose and select data.
+# based on index and column.
+df.loc[ row information,column information ]
+df.loc[["specific row","specific row"],:] #this means manpasand rows and koi bhi column
+df.loc['a':'d',:]  #this means a se d tak ki rows and every column
+df.loc[["a","d"],"3":"4"]
+
+
+
+df.isnull()
+#when we use this , a new dataframe is created  of the same shape but with only boolean values FALSE will
+#come to numerical values and TRUE will come to NaN values. 0 mein bhi ture ayega.
+#The df.isnull() method specifically looks for NaN values
+[]
+df.isnull.().sum()
+#this will tell me mere har column mein kisne null hein or kitney nhi
+
+
+df['column2'] #we can also do indexing like this
+df['column3']  # this method is alternative to df.loc[] but easier
+df[["C1","C2"]] #we can also do indexing like this will only extract 2 columns
+
+we can also use the above method to gather information about the column like|
+df["Column"].max()
+df["Column"].min()
+df["Column"].head() # see we can also do this 
+
+
+df["column name"].max()# this will only give maximum value of the column inserted inside of it.
+
+
+
+
+df.describe() # this gives complete information about the statical data of our data frame
+#methods example of pandas
+df.tail() #this shows the last rows ulike df.head()
+
+
+#to convert a dataframe into a an array we use 
+.values
+#fact: .values is an attribute not a method 
+
+my_array = df.values
+
+
+df.plot()
+df["Column"].plot()
+
+
+
+a shocker, i can use .plot() and see graphs without importing matplotlib
+
+#You're absolutely correct! When you use the .plot() method in pandas, it automatically uses Matplotlib
+#in the background without you needing to explicitly import it. Pandas is designed to be user-friendly 
+#and includes a built-in integration with Matplotlib for basic plotting tasks.
