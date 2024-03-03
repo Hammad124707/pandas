@@ -1,1 +1,15 @@
 
+Pandas ki data frame mein 3 zaroori cheezien hoti hein. We call them 3 components.
+a)Index (axis = 0)
+b)Columns (axis = 1)
+c) Data
+
+Each of this component can be extracted from the data frame using their own  *attribute.
+
+columns = df.columns
+index = df.index
+
+
+
+
+NaN means missing value, idhr value daali nhi gyi.
