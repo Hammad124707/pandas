@@ -1,1 +1,37 @@
+Introduction : we usually don't work on dataframes altogether we divide them into series then work on series individually.
+To work on series we first need to pull them out of DataFrame.
+
+
+
+3 ways to select  a column from a dataframe.
+
+df["column_name"]
+df.column_name
+df.loc[ : , "column_name"]       df.loc[ row information,column information ]
+
+
+#Calling methods on columns
+Jaise chapter1 part 1 mein hamne dekha ke sabse goat attribute he (.info() ) usi tariqe se idhr sabse mazeedar method he .value_counts()
+
+1 or bht kaam ka method  he hamare pass .unique()
+ye hamari series mein sara uniqe data batadega
+
+
+
+another kaam ka method hamare pass joke he .count() ye hamien bataega ke hamare pass kitne non-missing values hein we can also apply this on our dataframe
+
+.describe() ye wala method hamari dataframe ka poora poora statistics wala raaz khol deta he
+we can also individually apply .min()  , .max() ,
+
+
+
+
+ajeebsa method: .isna() yeh 1   series banaega jo sirf boolean hogi or isme sirf true false hoga, true for missing values and false for non missing values.
+
+
+
+
+
+
+
 
