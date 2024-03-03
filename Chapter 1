@@ -4,10 +4,14 @@ a)Index (axis = 0)
 b)Columns (axis = 1)
 c) Data
 
+
 Each of this component can be extracted from the data frame using their own  *attribute.
 
 columns = df.columns
 index = df.index
+
+
+
 
 data = df.to_numpy()  #this method converts data into a numpy array of respective data type, haterogenious data gets converted into object dtype.
 I can also convert index data type into numpy array data type using index.to_numpy() but rn i have to idea whats the use of it and is there any advantage or not.
@@ -20,4 +24,9 @@ NaN means missing value, idhr value daali nhi gyi.
 
 Its very cruicial to know about the data types of our dataframe. Without that hamien nahi pata chalega ispe konsa operation lag sakta he or konsa nhi
 to know them we simply use an attribute on our dataframe    (df.dtypes)
+ham is ( .dtype) attribute pe 1 method bhi laga sakte hein .value_counts() ka jisse pata chal jayega hamare dataframe mein kitne kitne datatypes ke columns hein.   df.dtypes.value_counts()
+
+
+
+We have a GOAT method in pandas ( df.info() ) yeh hamare dataframe ki baal ki khal nikal ke sab samne rakh dega
 
