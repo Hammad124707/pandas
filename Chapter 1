@@ -16,3 +16,8 @@ I can also convert index data type into numpy array data type using index.to_num
 
 
 NaN means missing value, idhr value daali nhi gyi.
+
+
+Its very cruicial to know about the data types of our dataframe. Without that hamien nahi pata chalega ispe konsa operation lag sakta he or konsa nhi
+to know them we simply use an attribute on our dataframe    (df.dtypes)
+
