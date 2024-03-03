@@ -9,6 +9,9 @@ Each of this component can be extracted from the data frame using their own  *at
 columns = df.columns
 index = df.index
 
+data = df.to_numpy()  #this method converts data into a numpy array of respective data type, haterogenious data gets converted into object dtype.
+I can also convert index data type into numpy array data type using index.to_numpy() but rn i have to idea whats the use of it and is there any advantage or not.
+
 
 
 
