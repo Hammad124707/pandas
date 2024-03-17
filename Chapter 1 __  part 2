@@ -28,6 +28,14 @@ ajeebsa method: .isna() yeh 1   series banaega jo sirf boolean hogi or isme sirf
 
 we can also use .any() method while working in pandas
 
+.dropna() this will drop the complete dataframe however we can manipulate it to not do that by giving the argument , df.dropna(how = "all")  this will only drop that row which
+has all the null values.
+
+
+df.fillna() 1 dictionary bhi as an argument le sakti he jisme ham specify kardien ke konsa column kia input dega when it comes to filling missing values.
+
+Its sugguested that missing values should be filled with mean median and mode.
+
 
 
 
