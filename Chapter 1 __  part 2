@@ -24,9 +24,9 @@ another kaam ka method hamare pass joke he .count() ye hamien bataega ke hamare 
 we can also individually apply .min()  , .max() ,
 
 
-
-
 ajeebsa method: .isna() yeh 1   series banaega jo sirf boolean hogi or isme sirf true false hoga, true for missing values and false for non missing values.
+
+we can also use .any() method while working in pandas
 
 
 
